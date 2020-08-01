@@ -19,3 +19,29 @@ iframe{
   a {
       transition: none !important;
   }
+  .userinfo{
+      width: 100%;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      border-bottom: 1px solid #282b33;
+      user-select: none;
+      font-size: 12px;
+  }
+  .layui-nav-img{
+      height: 40px;
+      width: 40px;
+  }
+  .text-tx{
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      background: #009688;
+      line-height: 40px;
+      text-align: center;
+      vertical-align: middle;
+      margin-right: 10px;
+      font-size: 20px;
+      color: #fff;
+  }
