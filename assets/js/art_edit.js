@@ -11,6 +11,7 @@ $(function () {
     }
     // 3. 初始化裁剪区域
     $image.cropper(options)
+
     var id = location.href.split('=')[1]
     $.ajax({
         type: 'get',
@@ -18,7 +19,10 @@ $(function () {
         success: function (res) {
             console.log(res)
             $('[name="title"]').val(res.data.title)
-            $image.attr("src", baseURL + res.data.cover_img)
+            $image
+                .cropper('destroy') // 销毁旧的裁剪区域
+                .attr('src', testURL + res.data.cover_img) // 重新设置图片路径
+                .cropper(options)
             // console.log(baseURL + res.data.cover_img)
             setTimeout(function () {
                 tinyMCE.activeEditor.setContent(res.data.content);
